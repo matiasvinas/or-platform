@@ -1,17 +1,24 @@
 # Sistema de monitoreo y gestión remota de invernaderos - Plataforma
 Proyecto realizado dentro del marco del Trabajo Profesional de Ingeniería Eletrónica de la Facultad de Ingeniería de la Universidad de Buenos Aires
 
-## Contenido 
-Este repositorio contiene el docker compose de la plataforma utilizada para que los usuarios puedan interactuar con dispositivos del sistema. \
 
-## Plataforma
-- Plataforma IoT seleccionada: [OpenRemote](https://openremote.io/)
+## Introducción al sistema de monitoreo y gestión
+El sistema de monitoreo y gestión remota de invernadores consta de las siguientes partes:
+- **Nodo sensor**: dispositivo responsable de medir temperatura, humedad del suelo, tensión de batería del sensor y envíar los datos a través de BLE Mesh al nodo gateway.
+- **Nodo *gateway***: dispositivo responsable de controlar actuadores y envíar datos de los sensores a la plataforma web a través del protocolo MQTT.  
+- **Plataforma web**: inplementada en AWS en base al proyecto de código abierto [Open Remote](https://openremote.io/), con la finalidad de controlar los nodos del sistema por parte del usuario.
 
-## Instalación del ambiente de desarrollo
-- Requisitos: Docker Desktop
-- Comandos: `docker-compose -p openremote up`
+Los nodos de la malla bluetooth están dispuestos como una red estrella donde el nodo gateway es el nodo central y el único que intercambia datos con la plataforma web.
 
-## Notas
-- El docker compose en este repositorio fue obtenido de la página oficial de OpenRemote.
-- Se modificó la versión de imagen del "Manager" a la versión 1.2.0 ya que dicha versión no presentaba problemas al momento de configurar el estilo de la UI.
-- Se habilitó el puerto 1883 del container del "Manager" para interactuar con el Broker MQTT de OpenRemote
+![Diagrama del dispositivo Sensor](images/diagrama-solucion-propuesta.png)
+
+
+## Enlaces útiles
+
+[ Implementación de Open Remote en AWS ](/implementacion/README.md)
+
+[ Configuración de la interfaz de la plataforma Open Remote ](/interfaz/README.md)
+
+[ Firmware del nodo sensor](https://github.com/matiasvinas/esp32c3-sensor)
+
+[Firmware del nodo *gateway*](https://github.com/matiasvinas/esp32c3-gateway)
