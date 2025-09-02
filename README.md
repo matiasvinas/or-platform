@@ -15,11 +15,14 @@ Los nodos de la malla Bluetooth están dispuestos en red estrella donde el nodo 
 ![Diagrama del dispositivo Sensor](images/diagrama-solucion-propuesta.png)
 
 
+## Plataforma Open Remote
+
+Para el instructivo de implementación de Open Remote en AWS, acceder a [ Implementación de Open Remote en AWS ](/implementacion/README.md).
+
+Para el instructivo de configuración de la Interfaz, acceder a [ Configuración de la interfaz de la plataforma Open Remote ](/interfaz/README.md).
+
+
 ## Enlaces útiles
-
-[ Implementación de Open Remote en AWS ](/implementacion/README.md)
-
-[ Configuración de la interfaz de la plataforma Open Remote ](/interfaz/README.md)
 
 [ Firmware del nodo sensor](https://github.com/matiasvinas/esp32c3-sensor)
 
