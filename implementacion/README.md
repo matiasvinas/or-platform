@@ -95,7 +95,7 @@ El siguiente documento contiene las instrucciones para la implementación de una
 
 ## Enlaces útiles
 
-[Video de TravisMedia](https://www.youtube.com/watch?v=CjKhQoYeR4Q&t=105s&ab_channel=TravisMedia)
+[Getting Started With AWS Cloud | Step-by-Step Guide](https://www.youtube.com/watch?v=CjKhQoYeR4Q&t=105s&ab_channel=TravisMedia)
 
 
 
