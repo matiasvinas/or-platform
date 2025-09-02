@@ -1,14 +1,16 @@
 # Sistema de monitoreo y gestión remota de invernaderos - Plataforma
-Proyecto realizado dentro del marco del Trabajo Profesional de Ingeniería Eletrónica de la Facultad de Ingeniería de la Universidad de Buenos Aires
+Proyecto realizado dentro del marco del Trabajo Profesional de Ingeniería Electrónica de la Facultad de Ingeniería de la Universidad de Buenos Aires
 
 
-## Introducción al sistema de monitoreo y gestión
+## Descripción del sistema
 El sistema de monitoreo y gestión remota de invernadores consta de las siguientes partes:
-- **Nodo sensor**: dispositivo responsable de medir temperatura, humedad del suelo, tensión de batería del sensor y envíar los datos a través de BLE Mesh al nodo gateway.
-- **Nodo *gateway***: dispositivo responsable de controlar actuadores y envíar datos de los sensores a la plataforma web a través del protocolo MQTT.  
-- **Plataforma web**: inplementada en AWS en base al proyecto de código abierto [Open Remote](https://openremote.io/), con la finalidad de controlar los nodos del sistema por parte del usuario.
+- **[ Nodo sensor](https://github.com/matiasvinas/esp32c3-sensor)**: dispositivo responsable de medir temperatura, humedad del suelo, tensión de batería del sensor y envíar los datos a través de BLE Mesh al nodo *gateway*.
+- **[Nodo *gateway*](https://github.com/matiasvinas/esp32c3-gateway)**: dispositivo responsable de controlar actuadores y envíar datos de los sensores a la plataforma web a través del protocolo MQTT.  
+- **Plataforma web**: inplementada en AWS en base al proyecto de código abierto [Open Remote](https://openremote.io/), con la finalidad de controlar y gestionar los nodos del sistema.
 
-Los nodos de la malla bluetooth están dispuestos como una red estrella donde el nodo gateway es el nodo central y el único que intercambia datos con la plataforma web.
+## Topología
+
+Los nodos de la malla Bluetooth están dispuestos en red estrella donde el nodo *gateway* corresponde al nodo central.
 
 ![Diagrama del dispositivo Sensor](images/diagrama-solucion-propuesta.png)
 
