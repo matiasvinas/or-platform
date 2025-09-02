@@ -1,7 +1,7 @@
 # Configuración de la interfaz de la plataforma Open Remote
 
 El siguiente documento contiene las instrucciones de configuración de la interfaz de la plataforma Open Remote para el [ Sistema de monitoreo y gestión remota de invernaderos](/README.md)
-, un proyecto realizado dentro del marco del Trabajo Profesional de Ingeniería Eletrónica de la Facultad de Ingeniería de la Universidad de Buenos Aires.
+, un proyecto realizado dentro del marco del Trabajo Profesional de Ingeniería Electrónica de la Facultad de Ingeniería de la Universidad de Buenos Aires.
 
 ## Índice
 - [Creación del *asset* nodo *gateway*](#creacion-del-asset-nodo-gateway)
@@ -11,11 +11,11 @@ El siguiente documento contiene las instrucciones de configuración de la interf
 
 ## Creación del *asset* nodo *gateway*
 
-1. Ingresar a la plataforma Open Remote e ir a la sección 'Assets'.
-2. Agregar un nuevo *asset* y seleccionar *Thing Asset*
-3. Ingresar el nombre: "Nodo *Gateway*".
-5. Ingresar al *asset* creado y seleccionar *Modify*.
-4. Agregar los siguientes atributos al *asset* creado:
+1. Ingresa a la plataforma Open Remote y luego a la sección 'Assets'.
+2. Agrega un nuevo *asset* y selecciona *Thing Asset*
+3. Ingresa el nombre: "Nodo *Gateway*".
+5. Ingresa al *asset* creado y selecciona *Modify*.
+4. Agrega los siguientes atributos al *asset* creado:
 
     |Variable|Name|Type|Configuration items|
     |----|----|-------|------|
@@ -27,11 +27,11 @@ El siguiente documento contiene las instrucciones de configuración de la interf
 
 ## Creación del *asset* nodo sensor
 
-1. Ingresar a la plataforma Open Remote e ir a la sección 'Assets'.
-2. Agregar un nuevo *asset* y seleccionar *Thing Asset*.
-3. Ingresar el nombre: "Nodo Sensor 1".
-4. En *parent node*, seleecionar "Nodo *gateway*.
-5. Agregar los siguientes atributos al *asset* creado:
+1. Ingresa a la plataforma Open Remote y luego a la sección 'Assets'.
+2. Agrega un nuevo *asset* y selecciona *Thing Asset*.
+3. Ingresa el nombre: "Nodo Sensor 1".
+4. En *parent node*, seleeciona "Nodo *gateway*.
+5. Agrega los siguientes atributos al *asset* creado:
 
     |Variable|Name|Type|Configuration items|
     |----|----|-------|------|
@@ -39,36 +39,36 @@ El siguiente documento contiene las instrucciones de configuración de la interf
     |Humedad del suelo|humedad|Number|Label: "Humedad del suelo" <br> Units: ["percentage"] <br> Format: {"minimumFractionDigits":2,"maximumFractionDigits":2} <br> Store data points: true <br> Read only: true |
     |Temperatura |temperatura|Number|Label: "Temperatura" <br> Units: ["celsius"] <br> Format: {"minimumFractionDigits":2,"maximumFractionDigits":2} <br> Store data points: true <br> Read only: true |
 
-6. Repetir los pasos anteriores para crear los *assets*:
+6. Repite los pasos anteriores para crear los *assets*:
     - "Nodo Sensor 2"
     - "Nodo Sensor 3"
 
 
 ## Creación del tablero
-1. Ingresar a la plataforma Open Remote e ir a la sección 'Insights'.
-2. Crear un nuevo *dashboard* y dentro de este, seleccionar *Modify*.
-3. Para el atributo "Frecuencia de muestreo", agregar un *widget attribute* con la siguiente configuración:
+1. Ingresa a la plataforma Open Remote y luego a la sección 'Insights'.
+2. Crea un nuevo *dashboard* y dentro de este, selecciona *Modify*.
+3. Para el atributo "Frecuencia de muestreo", agrega un *widget attribute* con la siguiente configuración:
 
     |Configuración|Valor|
     |----|----|
     |Allow user input | true |
     |Show time of last update | true |
 
-4. Para el atributo "Sistema de riego activado", agregar un *widget attribute* con la siguiente configuración:
+4. Para el atributo "Sistema de riego activado", agrega un *widget attribute* con la siguiente configuración:
 
     |Configuración|Valor|
     |----|----|
     |Allow user input | true |
     |Show time of last update | true |
 
-5. Para todos los atributos "Nodo sensor conectado", agregar un *widget attribute* con la siguiente configuración:
+5. Para todos los atributos "Nodo sensor conectado", agrega un *widget attribute* con la siguiente configuración:
 
     |Configuración|Valor|
     |----|----|
     |Allow user input | false |
     |Show time of last update | true |
 
-6. Para todos los atributos "Batería", agregar un *widget gauge* con la siguiente configuración:
+6. Para todos los atributos "Batería", agrega un *widget gauge* con la siguiente configuración:
 
     |Configuración|Valor|
     |----|----|
@@ -78,7 +78,7 @@ El siguiente documento contiene las instrucciones de configuración de la interf
     |Threhold orange color | 6,6 |
     |Threhold green color | 9 |
 
-7. Para todos los atributos "Humedad del suelo", agregar un *widget gauge* con la siguiente configuración:
+7. Para todos los atributos "Humedad del suelo", agrega un *widget gauge* con la siguiente configuración:
 
     |Configuración|Valor|
     |----|----|
@@ -88,7 +88,7 @@ El siguiente documento contiene las instrucciones de configuración de la interf
     |Threhold orange color | 20 |
     |Threhold green color | 40 |
 
-8. Para todos los atributos "Humedad del suelo", agregar un *widget line chart* con la siguiente configuración:
+8. Para todos los atributos "Humedad del suelo", agrega un *widget line chart* con la siguiente configuración:
 
     |Configuración|Valor|
     |----|----|
@@ -100,10 +100,10 @@ El siguiente documento contiene las instrucciones de configuración de la interf
 
 ## Creación de alarma
 
-1. Ingresar a la plataforma Open Remote e ir a la sección 'Rules'.
-2. Agregar una nueva regla *When-Then*.
-3. Seleccionar *Always Active*.
-4. En el cuadrante *When*, agregar la siguiente configuración:
+1. Ingresa a la plataforma Open Remote y luego a la sección 'Rules'.
+2. Agrega una nueva regla *When-Then*.
+3. Selecciona *Always Active*.
+4. En el cuadrante *When*, agrega la siguiente configuración:
 
     |Configuración|Valor|
     |----|----|
@@ -111,6 +111,6 @@ El siguiente documento contiene las instrucciones de configuración de la interf
     |Attribute | Nodo sensor 1 conectado |
     |Operator | false |
 
-5. En el cuadrante *Then*, configurar el parámetro *Severity* como *Medium*.
-6. Guardar configuración.
-7. Para observar las alarmas, clickear en el ícono de la campana ubicado en la parte superior.
+5. En el cuadrante *Then*, configura el parámetro *Severity* como *Medium*.
+6. Guarda configuración.
+7. Para observar las alarmas, clickea en el ícono de la campana ubicado en la parte superior.

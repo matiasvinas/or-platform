@@ -1,6 +1,6 @@
 # Implementación de Open Remote en AWS
 
-El siguiente documento contiene las instrucciones para la implementación de una instancia personal de la plataforma Open Remote, a través de AWS marketplace, para el [ Sistema de monitoreo y gestión remota de invernaderos](/README.md), un proyecto realizado dentro del marco del Trabajo Profesional de Ingeniería Eletrónica de la Facultad de Ingeniería de la Universidad de Buenos Aires.
+El siguiente documento contiene las instrucciones para la implementación de una instancia personal de la plataforma Open Remote, a través de AWS marketplace, para el [ Sistema de monitoreo y gestión remota de invernaderos](/README.md), un proyecto realizado dentro del marco del Trabajo Profesional de Ingeniería Electrónica de la Facultad de Ingeniería de la Universidad de Buenos Aires.
 
 ## Índice
 - [Creación de cuenta en AWS](#creacion-de-cuenta-en-aws)
@@ -49,20 +49,16 @@ El siguiente documento contiene las instrucciones para la implementación de una
     2. Disponer de un método de pago válido (tarjeta de crédito o débito).
     3. Conocer el nombre de dominio y la extensión (.com, .net, .org, etc.) que deseas adquirir.
 
-2. Abre Amazon Route 53
+2. Registro de dominio en Amazon Route 53
     1. En la barra de búsqueda de la consola escribe “Route 53” y selecciona el servicio.
     2. Dentro de Route 53, haz clic en **Registrar dominio** (*Register domain*).
+    3. En el campo de texto escribe el nombre de dominio deseado junto con su extensión.
+    4. Pulsa **Comprobar** para validar disponibilidad.
+    5. Si está libre, selecciona **Agregar al carrito** (*Add to cart*).
+    6. Proporciona los datos de contacto del propietario (persona o empresa), incluyendo dirección postal y teléfono.
+    7. Elige si deseas ocultar estos datos en el **WHOIS** (opción de privacidad).
 
-3. Busca y añade el dominio al carrito
-    1. En el campo de texto escribe el nombre de dominio deseado junto con su extensión.
-    2. Pulsa **Comprobar** para validar disponibilidad.
-    3. Si está libre, selecciona **Agregar al carrito** (*Add to cart*).
-
-4. Completa la información de registro
-    1. Proporciona los datos de contacto del propietario (persona o empresa), incluyendo dirección postal y teléfono.
-    2. Elige si deseas ocultar estos datos en el **WHOIS** (opción de privacidad).
-
-5. Revisa y paga
+3. Revisión y pago
     1. Verifica el resumen de la compra: nombre de dominio, extensión, periodo de registro y coste anual (entre 9 y varios cientos de USD según TLD).
     2. Confirma y liquida la factura inmediatamente para evitar cancelaciones automáticas pasados cinco días.
     3. AWS envía un mail con un link de confirmación al administrador para validar la compra del dominio. En caso de no confirmar, el dominio será eliminado.
@@ -82,14 +78,14 @@ El siguiente documento contiene las instrucciones para la implementación de una
         ![EC2 Connection](/images/ec2-connect.png)
 
 2. Creación del `.env`
-    1. Crear un archivo `.env` en el mismo directorio donde se encuentra el archivo `dokcer-compose.yml`.
+    1. Crea un archivo `.env` en el mismo directorio donde se encuentra el archivo `dokcer-compose.yml`.
     2. Abre el `.env` y agrega la siguiente línea: `OR_HOSTNAME=subdominio.mi-dominio.com`
     3. Guarda los cambios y cierra el archivo.
 
-        ![EC2 Console](/images/ec2-ssh.jpg)
+        ![EC2 Console](/images/ec2-ssh.png)
 
 3. Reinicio de containers
-    1. Frenar el container donde se ejecuta el *manager* y volver a ejecturalo mediante los siguientes comandos:
+    1. Frena el container donde se ejecuta el *manager* y volver a ejecturalo mediante los siguientes comandos:
         ```
         docker ps # lista los cointainers en ejecución
         docker stop <contenedor> # frena el container
