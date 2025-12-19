@@ -12,7 +12,7 @@ El sistema de monitoreo y gestión remota de invernadores consta de las siguient
 
 Los nodos de la malla Bluetooth están dispuestos en red estrella donde el nodo *gateway* corresponde al nodo central.
 
-![Diagrama del dispositivo Sensor](images/diagrama-solucion-propuesta.png)
+![Diagrama del dispositivo Sensor](images/diagrama-solucion-propuesta2.png)
 
 
 ## Plataforma Open Remote
