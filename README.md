@@ -1,6 +1,6 @@
 # Sistema de monitoreo y gestión remota de invernaderos - Plataforma
 Proyecto realizado dentro del marco del Trabajo Profesional de Ingeniería Electrónica de la Facultad de Ingeniería de la Universidad de Buenos Aires
-
+c
 
 ## Descripción del sistema
 El sistema de monitoreo y gestión remota de invernadores consta de las siguientes partes:
